@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Phoenix_Temp_2.Models.jual>
+
+@{
+    ViewBag.Title = "AddToCart";
+}
+
+<h2>AddToCart</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.useradmin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_barang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tgl_beli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qty)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.useradmin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_barang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tgl_beli)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qty)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_jual }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_jual }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_jual })
+        </td>
+    </tr>
+}
+
+</table>

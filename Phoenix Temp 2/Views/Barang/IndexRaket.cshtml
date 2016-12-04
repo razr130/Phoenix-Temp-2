@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Phoenix_Temp_2.Models.Barang>
+@{
+    ViewBag.Title = "Raket";
+}
+
+<div class="container body-content">
+    <h1>CATALOG RAKET</h1>
+
+    @Html.Raw(TempData["Pesan"])
+    <br />
+    @if (User.IsInRole("Admin"))
+    {
+        <p>
+            <input type="button" value="Tambah Barang" onclick="location.href='@Url.Action("Create", "Barang")'" class="btn btn-success" />
+        </p>
+    }
+    <div class="row">
+        @foreach (var brg in Model)
+        {
+
+            <div class="col-md-4">
+                <h3 style="text-align:center">@brg.nama_barang</h3>
+                <div class="thumbnail">
+                    <img src="~/Content/Images/@brg.gbr_barang" alt="@brg.model" style="min-height:200px;height:200px;" />
+                </div>
+                <table style="width:100%;background-color: rgba(255, 255, 255, .3);">
+                    <tr style="padding-left:5px">
+                        <td width="25%" style="margin-left:5px">
+                            <b>&nbsp;  Type    </b>
+                        </td>
+                        <td align="left">
+                            : @brg.jenis_barang
+                        </td>
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td>
+                            <b>&nbsp; Model   </b>
+                        </td>
+                        <td align="left">
+                            : @brg.model
+                        </td>
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td>
+                            <b> &nbsp; Color   </b>
+                        </td>
+                        <td align="left">
+                            : @brg.warna
+                        </td>
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td>
+                            <b>&nbsp;  Size  </b>
+                        </td>
+                        <td align="left">
+                            : @brg.ukuran
+                        </td>
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td>
+                            <b>&nbsp;  Stock   </b>
+                        </td>
+                        <td align="left">
+                            : @brg.stok
+                        </td>
+
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td><b>&nbsp; Price   </b></td>
+                        <td align="left"> : IDR @brg.harga</td>
+                    </tr>
+                    <tr style="padding-left:5px">
+                        <td><b>&nbsp; Discount   </b></td>
+                        <td align="left"> : @brg.diskon %</td>
+                    </tr>
+
+
+                </table>
+                <br>
+                <div style="width:300px;margin: 0 auto;text-align:center">
+                    @if (User.IsInRole("Admin"))
+                {
+                        <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Barang")?id=' + @brg.id_barang" class="btn btn-warning" />
+                        <input type="button" value="Delete" onclick="location.href='@Url.Action("Delete", "Barang")?id=' + @brg.id_barang" class="btn btn-danger" />
+
+                    }
+
+                    <input type="button" value="Pesan" onclick="location.href='@Url.Action("AddtoCart", "Jual")?id=' + @brg.id_barang" class="btn btn-success" />
+                    <hr />
+                </div>
+
+            </div>
+
+
+
+        }
+
+
+
+
+    </div>
+</div>

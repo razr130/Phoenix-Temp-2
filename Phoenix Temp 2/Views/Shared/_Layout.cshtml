@@ -1,0 +1,124 @@
+﻿@using MvcSiteMapProvider.Web.Html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Badminton Shop</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/hover.css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" style="height:70px">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div style="padding-left:70px;padding-top:15px">
+                    @*@Html.ActionLink("PHOENIX", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                    <a href='@Url.Action("Index","Home")'><img src="~/Content/Images/phoenix.png" height="43" width="100" /></a>
+                </div>
+            </div>
+            <div style="padding-top:10px">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse " style="position:relative;top:19px">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div id="navmenu" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                   
+                    <li class="hvr-bounce-to-top">@Html.ActionLink("Home", "Index", "Home",  routeValues: null, htmlAttributes: new { @style = "color:white" })</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+                    <li class="dropdown hvr-bounce-to-top" style="padding-left:0px">
+                        <a href="#"  class="dropdown" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white">Items &nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu" id="myItem" style="padding-left:0px">
+                            <li style="padding-left:0px">
+                                <a href="@Url.Action("IndexRaket","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-tree-conifer"></span> Raket
+                                </a>
+                               
+                            </li>
+                            <li class="divider"></li>
+                            <li role="presentation">
+                                <a href="@Url.Action("IndexKok","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-tree-conifer"></span> Kok
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li role="presentation">
+                                <a href="@Url.Action("IndexBaju","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-cloud"></span> Baju
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li role="presentation">
+                                <a href="@Url.Action("IndexCelana","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-floppy-disk"></span> Celana
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li role="presentation">
+                                <a href="@Url.Action("IndexSepatu","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-refresh"></span> Sepatu
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li role="presentation">
+                                <a href="@Url.Action("IndexAksesoris","Barang")" target="_blank">
+                                    <span class="glyphicon glyphicon-music"></span> Aksesoris
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li class="hvr-bounce-to-top">@Html.ActionLink("Full Catalog", "Index", "Barang", routeValues: null, htmlAttributes : new { @style = "color:white" })</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li class="hvr-bounce-to-top">@Html.ActionLink("Discount", "IndexDiskon", "Barang", routeValues: null, htmlAttributes: new { @style = "color:white" })</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="kontener body-konten">
+        <br />
+        <div style="margin-left:50px">
+        Breadcrumbs : @Html.MvcSiteMap().SiteMapPath()
+             </div>
+        <hr />
+        @RenderBody()
+        <hr />
+        <footer style="color:white;margin-left:50px">
+            <p>&copy; @DateTime.Now.Year - razr130</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

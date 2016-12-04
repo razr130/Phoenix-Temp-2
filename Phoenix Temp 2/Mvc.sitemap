@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-3.0" enableLocalization="true">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="Full Catalog" controller="Barang" action="Index">
+      <mvcSiteMapNode title="Raket" controller="Barang" action="IndexRaket" />
+    <mvcSiteMapNode title="Kok" controller="Barang" action="IndexKok" />
+    <mvcSiteMapNode title="Baju" controller="Barang" action="IndexBaju" />
+  <mvcSiteMapNode title="Celana" controller="Barang" action="IndexCelana" />
+  <mvcSiteMapNode title="Sepatu" controller="Barang" action="IndexSeaptu" />
+    <mvcSiteMapNode title="Aksesoris" controller="Barang" action="IndexAksesoris" />
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Shopping Chart" controller="Jual" action="Index" />
+    <mvcSiteMapNode title="Shopping Chart Admin" controller="Jual" action="IndexAdmin" />
+    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+  </mvcSiteMapNode>
+  
+
+</mvcSiteMap>

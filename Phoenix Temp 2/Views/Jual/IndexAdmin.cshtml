@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Phoenix_Temp_2.Models.jual>
+
+@{
+    ViewBag.Title = "IndexAdmin";
+}
+<div class="container body-content">
+    <h2>IndexAdmin</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                User Name
+            </th>
+
+            <th>
+                Nama Barang
+            </th>
+            <th>
+                Tanggal Beli
+            </th>
+            <th>Harga</th>
+            <th>
+                Quantity
+            </th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            var price = string.Format("{0:N0}", item.Barang.harga);
+            var subtotal = item.qty * item.Barang.harga;
+            var tgl = item.tgl_beli.ToString("d-MMMM-yyyy");
+
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.username)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Barang.nama_barang)
+                </td>
+                <td>
+                    @tgl
+                </td>
+                <td>@price</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.qty)
+                </td>
+                <td>@string.Format("{0:N0}", subtotal)</td>
+                <td>
+                    <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Jual")?id=' + @item.id_jual" class="btn btn-warning" />
+                    <input type="button" value="Delete" onclick="location.href='@Url.Action("DeleteAdmin", "Jual")?id=' + @item.id_jual" class="btn btn-danger" />
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+    </table>
+</div>

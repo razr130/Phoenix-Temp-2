@@ -1,0 +1,274 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 0;
+  background-image : linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(Images/jeans.jpg);
+  
+  min-height : 100%;
+  min-width : 100%;
+  background-size : 100% 100%;
+  background-repeat : repeat;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.body-konten {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#navmenu {
+    font-size : large;
+  color: #ffffff;
+  display : inline-block;
+  text-align : center;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #999999;
+  display : inline-block;
+  text-align : center;
+}
+.nav-tabs > li {
+  display : inline-block;
+  text-align : center;
+  margin-bottom: -1px;
+}
+
+
+
+/* css for parallax */
+.content-block-one {
+  padding: 30px;
+  margin-bottom: 0px;
+  color: inherit;
+  background-color: #222426;
+}
+.content-block-one h1,
+.content-block-one .h1 {
+  color: inherit;
+}
+.content-block-one p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+.content-block-one > hr {
+  border-top-color: #d5d5d5;
+}
+.container .content-block-one {
+  border-radius: 6px;
+}
+.content-block-one .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .content-block-one {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .content-block-one {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .content-block-one h1,
+  .content-block-one .h1 {
+    font-size: 63px;
+  }
+}
+.content-space-one {
+  padding: 0px;
+  margin-bottom: 0px;
+  color: inherit;
+  background: url(Images/yellow.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.content-space-two {
+  padding: 0px;
+  margin-bottom: 0px;
+  color: inherit;
+  background: url(Images/1.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.content-space-three {
+  padding: 0px;
+  margin-bottom: 0px;
+  color: inherit;
+  background: url(Images/large2.jpg) no-repeat center center fixed; 
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.page-break {
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+/*.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}*/
+.navbar-inverse { 
+    
+    border-color: none;
+    border-radius : 0;
+  /*background-color: rgba(231,126,34,0.5);*/
+  background-color: rgba(0,0,0,0.5);
+  
+}
+
+#karoselimg {
+    width : 100%;
+}
+
+.kontener {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+
+}
+
+.line {
+    display:inline;
+}
+
+.form-container {
+    display:inline-block;
+}
+
+#textboxsearch {
+    width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+    border-radius : 5px;
+    background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+    .btn-oye {
+  color: #ffffff;
+  background-color: transparent;
+  border-color:transparent;
+  
+}
+
+.btn-oye:hover,
+.btn-oye:focus,
+.btn-oye:active,
+.btn-oye.active,
+.open .dropdown-toggle.btn-oye {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: transparent;
+  transition:ease-in;
+}
+
+.btn-oye:active,
+.btn-oye.active,
+.open .dropdown-toggle.btn-oye {
+  background-image: none;
+}
+
+.btn-oye.disabled,
+.btn-oye[disabled],
+fieldset[disabled] .btn-oye,
+.btn-oye.disabled:hover,
+.btn-oye[disabled]:hover,
+fieldset[disabled] .btn-oye:hover,
+.btn-oye.disabled:focus,
+.btn-oye[disabled]:focus,
+fieldset[disabled] .btn-oye:focus,
+.btn-oye.disabled:active,
+.btn-oye[disabled]:active,
+fieldset[disabled] .btn-oye:active,
+.btn-oye.disabled.active,
+.btn-oye[disabled].active,
+fieldset[disabled] .btn-oye.active {
+  background-color: black;
+  border-color: black;
+}
+@media (min-width: 768px) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    float: right !important;
+    display : inline;
+  }
+}
+
+
+#badmintonbg {
+    background-image : url(Images/wallpaper.jpg);
+    background-size : cover;
+    background-position : center center;
+    position : relative;
+    top : 0;
+    bottom : 0;
+    height : 100vh;
+    z-index : -10;
+}
+
+#badmintonbgblacked {
+
+    position : absolute;
+    background-color : rgba(0,0,0,0.5);
+    top : 0;
+    bottom : 0;
+    height : 100%;
+    width : 100%;
+    z-index : -5;
+
+}
+
+#whitey {
+    color : white;
+
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #ffffff;
+  
+  
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+  font-weight : bold;
+}
+.jumbotron {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: white;
+  background-color: dimgray;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
