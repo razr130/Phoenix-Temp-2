@@ -3,6 +3,10 @@
     ViewBag.Title = "Full Catalog";
 }
 <div class="container body-content">
+    <br />
+    <br />
+    Breadcrumbs : @Html.MvcSiteMap().SiteMapPath()
+    <hr />
     <h1>FULL CATALOG</h1>
 
     @Html.Raw(TempData["Pesan"])

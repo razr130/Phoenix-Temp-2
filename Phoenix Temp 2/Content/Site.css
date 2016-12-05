@@ -108,6 +108,16 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.content-space-four {
+  padding: 0px;
+  margin-bottom: 0px;
+  color: inherit;
+  background: url(Images/phoenix.png) no-repeat center center fixed; 
+  background-size: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
 .page-break {
     width: 50%;
     height: 3px;
@@ -126,7 +136,8 @@
 }*/
 .navbar-inverse { 
     
-    border-color: none;
+    border : 0;
+    border-color: transparent;
     border-radius : 0;
   /*background-color: rgba(231,126,34,0.5);*/
   background-color: rgba(0,0,0,0.5);
