@@ -5,7 +5,10 @@
 
 <div class="container body-content">
     
-
+    <br />
+    <br />
+    Breadcrumbs : @Html.MvcSiteMap().SiteMapPath()
+    <hr />
     @Html.Raw(TempData["Pesan"])
     <br />
     @if (User.IsInRole("Admin"))

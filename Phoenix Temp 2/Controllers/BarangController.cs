@@ -132,7 +132,8 @@ namespace Phoenix_Temp_2.Controllers
             using (BarangDAL svCat = new BarangDAL())
             {
                 var results = svCat.Search(txtSearch).ToList();
-
+                TempData["Pesan"] = Helpers.Message.GetPesan(" ",
+                      "warning", "Anda mencari " + txtSearch );
                 return View(results);
             }
         }

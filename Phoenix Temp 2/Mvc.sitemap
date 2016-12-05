@@ -9,7 +9,10 @@
   <mvcSiteMapNode title="Celana" controller="Barang" action="IndexCelana" />
   <mvcSiteMapNode title="Sepatu" controller="Barang" action="IndexSeaptu" />
     <mvcSiteMapNode title="Aksesoris" controller="Barang" action="IndexAksesoris" />
+    <mvcSiteMapNode title="Diskon" controller="Barang" action="IndexDiskon" />
     </mvcSiteMapNode>
+    <mvcSiteMapNode title="Catalog" controller="Barang" action="Search" />
+    <mvcSiteMapNode title="Log In" controller="Account" action="Login" />
     <mvcSiteMapNode title="Shopping Chart" controller="Jual" action="Index" />
     <mvcSiteMapNode title="Shopping Chart Admin" controller="Jual" action="IndexAdmin" />
     <mvcSiteMapNode title="About" controller="Home" action="About"/>
