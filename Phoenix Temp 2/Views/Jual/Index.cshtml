@@ -62,12 +62,15 @@
         <tr>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
             <td>Total Order : </td>
-
+            
             <td>@string.Format("{0:N0}", total)</td>
         </tr>
 
     </table>
 
-    <button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Barang")';return false;"> << Buy More</button>
+    <button class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Barang")';return false;"> << Buy More</button>
+    <button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")';return false;">Done</button>
 </div>
