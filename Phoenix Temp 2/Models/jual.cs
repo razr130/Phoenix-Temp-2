@@ -28,6 +28,8 @@ namespace Phoenix_Temp_2.Models
         [Column(TypeName = "date")]
         public DateTime tgl_beli { get; set; }
 
+        [Range(0, 100,
+       ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public int qty { get; set; }
 
        

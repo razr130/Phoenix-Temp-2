@@ -3,13 +3,19 @@
     padding-bottom: 20px;
     margin: 0;
   background-image : linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(Images/jeans.jpg);
-  
+  color:white;
   min-height : 100%;
   min-width : 100%;
   background-size : 100% 100%;
   background-repeat : repeat;
+  font-family: Century Gothic,sans-serif;
 }
-
+html {
+  font-family: Century Gothic,sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      color:white;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -40,8 +46,57 @@
   margin-bottom: -1px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Century Gothic,sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color:white;
+}
+
+.thumbnail {
+  display: inline-block;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: rgba(255, 255, 255, .3);
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.thumbnail > img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #428bca;
+}
 
 
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
 /* css for parallax */
 .content-block-one {
   padding: 30px;

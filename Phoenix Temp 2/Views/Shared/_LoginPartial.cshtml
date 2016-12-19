@@ -30,20 +30,26 @@
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px;color:white"><a href="javascript:document.getElementById('logoutForm').submit()" style="color:white">Log off</a></td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
+                    @*<td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">
+                        
+                            
+                        
+                    </td>*@
                     <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">
-                        @if (User.IsInRole("Customer"))
-                        {
-                            <a href="~/Jual" style="color:white"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                        }
-                    </td>
-                    <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">
-                         @if (User.IsInRole("Admin"))
+                        @if (User.IsInRole("Admin"))
                         {
                             <a href="~/Jual/IndexAdmin" style="color:white"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                         }
+                        else
+                        {
+                            <a href="~/Jual" style="color:white"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        }
+
+                        
+
                     </td>
-            
-            }
+
+                }
             
         </tr>
     </table>
@@ -57,15 +63,23 @@ else
                     <td>
                         @*searchbar dan search button*@
                         @using (Html.BeginForm("Search", "Barang", FormMethod.Get, new { @style = "display:inline" }))
-                         {
+                        {
                             <p>
-                                <input type="text" id="textboxsearch"  name="txtSearch" placeholder="Carilah kebenaran di sini ... " style="margin-top : 8px;width:4000px"/>
+                                <input type="text" id="textboxsearch" name="txtSearch" placeholder="Carilah kebenaran di sini ... " style="margin-top : 8px;width:4000px" />
                                 <button class="btn btn-oye hvr-bounce-to-top" type="submit">Search</button>
                             </p>
                         }
                     </td>
-                    <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">@Html.ActionLink("Log in", "Login", "Account",  routeValues: null, htmlAttributes: new { id = "loginLink", @style = "color:white;padding-top:100" })</td>
-                </tr>
+                    <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @style = "color:white;padding-top:100" })</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="hvr-bounce-to-top line" style="align-items:center;vertical-align:central;margin-top:15px">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @style = "color:white;padding-top:100" })</td>
+                    </tr>
+
             </table>
             }
 

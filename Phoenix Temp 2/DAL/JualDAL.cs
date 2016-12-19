@@ -114,7 +114,7 @@ namespace Phoenix_Temp_2.DAL
             }
         }
 
-        public void Delete(int id)
+        public void Delete(int id, int qty)
         {
             var result = GetDataById(id);
             if (result != null)
@@ -122,6 +122,9 @@ namespace Phoenix_Temp_2.DAL
                 db.juals.Remove(result);
                 try
                 {
+                    var stock = GetBarangById(result.id_barang);
+
+                    stock.stok += qty;
                     db.SaveChanges();
                 }
                 catch (Exception ex)

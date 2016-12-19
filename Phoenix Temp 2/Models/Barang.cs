@@ -31,8 +31,9 @@ namespace Phoenix_Temp_2.Models
 
         public int harga { get; set; }
 
-        [Range(0,int.MaxValue,
+        [Range(0,100,
        ErrorMessage = "Value for {0} must be between {1} and {2}.")]
+        
         public int? stok { get; set; }
 
         [StringLength(50)]

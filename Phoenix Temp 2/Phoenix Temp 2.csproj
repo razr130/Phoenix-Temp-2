@@ -236,11 +236,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\hover-min.css" />
     <Content Include="Content\hover.css" />
     <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\1c1a947d-1423-4399-81a7-d7a40fcb515c_bl.jpg" />
+    <Content Include="Content\Images\24010855-51de-41e9-9b57-2d22ae1c3619_59475c_61a1b8c38a7145588c52207ba8402a80.jpg" />
+    <Content Include="Content\Images\37dde522-8911-4167-8224-7cfc88b6d2f2_shr.jpg" />
+    <Content Include="Content\Images\5bcec06e-4021-4a87-bd33-ca80069020ca_large2.jpg" />
+    <Content Include="Content\Images\62b4137d-e117-47da-9985-111e2d58964a_7126-BAG-White-2.jpg" />
+    <Content Include="Content\Images\6e7001c4-d3ae-4534-8c1a-ec812166a8d6_622_GM_1429751905491.jpg" />
+    <Content Include="Content\Images\7408989d-ca29-4438-810e-17cf8ffbcd8c_pn.jpg" />
+    <Content Include="Content\Images\879cb673-3100-4699-a6c8-9d718658f9af_%24_32 %281%29.jpg" />
+    <Content Include="Content\Images\948b0e52-a0cc-4abd-aa6a-78f5da3b7a9a_622_GM_1429751905491.jpg" />
+    <Content Include="Content\Images\bae04ba4-0162-4285-9d0d-545c5787ff19_bgu.jpg" />
     <Content Include="Content\Images\bluered.jpg" />
+    <Content Include="Content\Images\c4e10168-3243-4645-9853-1ad99263c090_622_GM_1429751905491.jpg" />
+    <Content Include="Content\Images\f0a40cc5-dbbe-46c5-a6e7-423d4feca417_uii.jpg" />
+    <Content Include="Content\Images\f26348a9-3abc-45d7-bc03-1f8cff3b3a6f_net.jpg" />
+    <Content Include="Content\Images\f9f45a85-bf36-4f06-aa1e-65dd8b0b7ebe_ss.jpg" />
     <Content Include="Content\Images\jeans.jpg" />
     <Content Include="Content\Images\large1.jpg" />
     <Content Include="Content\Images\large2.jpg" />
@@ -269,6 +282,8 @@
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\phoenixstore - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\phoenixstore - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

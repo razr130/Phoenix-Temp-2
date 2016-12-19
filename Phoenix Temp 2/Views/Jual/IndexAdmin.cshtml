@@ -6,9 +6,7 @@
 <div class="container body-content">
     <h2>IndexAdmin</h2>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+   
     <table class="table">
         <tr>
             <th>
@@ -54,7 +52,7 @@
                 <td>@string.Format("{0:N0}", subtotal)</td>
                 <td>
                     <input type="button" value="Edit" onclick="location.href='@Url.Action("Edit", "Jual")?id=' + @item.id_jual" class="btn btn-warning" />
-                    <input type="button" value="Delete" onclick="location.href='@Url.Action("DeleteAdmin", "Jual")?id=' + @item.id_jual" class="btn btn-danger" />
+                    <input type="button" value="Delete" onclick="location.href='@Url.Action("DeleteAdmin", "Jual")?id=' + @item.id_jual + '&qty=' + @item.qty" class="btn btn-danger" />
                 </td>
             </tr>
         }

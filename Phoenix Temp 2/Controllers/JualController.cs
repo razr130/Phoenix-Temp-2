@@ -14,6 +14,17 @@ namespace Phoenix_Temp_2.Controllers
         private PhoenixModel db = new PhoenixModel();
         public ActionResult Index()
         {
+            if (Session["username"] == null)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    Session["username"] = User.Identity.Name;
+                }
+                else
+                {
+                    Response.Redirect("~/Login.aspx");
+                }
+            }
             using (JualDAL scService = new JualDAL())
             {
                 string username =
@@ -57,6 +68,10 @@ namespace Phoenix_Temp_2.Controllers
                     TempData["Pesan"] = Helpers.Message.GetPesan("Error !",
                                          "danger", ex.Message);
                 }
+            }
+            if (User.IsInRole("Admin"))
+            {
+                return RedirectToAction("IndexAdmin");
             }
             return RedirectToAction("Index");
         }
@@ -118,7 +133,7 @@ namespace Phoenix_Temp_2.Controllers
             }
         }
 
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? id, int qty)
         {
             if (id != null)
             {
@@ -126,7 +141,7 @@ namespace Phoenix_Temp_2.Controllers
                 {
                     try
                     {
-                        service.Delete(id.Value);
+                        service.Delete(id.Value, qty);
                         TempData["Pesan"] = Helpers.Message.GetPesan("Sukses !",
                             "success", "Data kategori berhasil di hapus !");
                     }
@@ -140,7 +155,7 @@ namespace Phoenix_Temp_2.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteAdmin(int? id)
+        public ActionResult DeleteAdmin(int? id, int qty)
         {
             if (id != null)
             {
@@ -148,7 +163,7 @@ namespace Phoenix_Temp_2.Controllers
                 {
                     try
                     {
-                        service.Delete(id.Value);
+                        service.Delete(id.Value, qty);
                         TempData["Pesan"] = Helpers.Message.GetPesan("Sukses !",
                             "success", "Data kategori berhasil di hapus !");
                     }
